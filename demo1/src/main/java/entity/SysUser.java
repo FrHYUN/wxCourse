@@ -10,7 +10,7 @@ import java.util.Collection;
 @Data
 public class SysUser implements UserDetails {
 
-    private String id;
+    private int id;
 
     private String username;
 

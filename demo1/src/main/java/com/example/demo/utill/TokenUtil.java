@@ -45,4 +45,8 @@ public class TokenUtil {
     public String getUseridBytoken(String token){
         return this.getTokenBody(token).get("id").toString();
     }
+
+    public String getOpenidBytoken(String token){
+        return this.getTokenBody(token).get("openid").toString();
+    }
 }

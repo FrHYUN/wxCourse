@@ -5,38 +5,38 @@ import java.io.Serializable;
 
 @Data
 public class Result implements Serializable {
-    private boolean flag;
+    private int code;
 
-    private String message;
+    private String msg;
 
     private Object data;
 
     public Result() {
     }
 
-    public Result(boolean flag, String message, Object data) {
-        this.flag = flag;
-        this.message = message;
+    public Result(int code, String message, Object data) {
+        this.code = code;
+        this.msg= message;
         this.data = data;
     }
-    public Result(boolean flag, String message) {
-        this.flag = flag;
-        this.message = message;
+    public Result(int code, String message) {
+        this.code = code;
+        this.msg = message;
         this.data = data;
     }
 
     public  static  Result success(String message, Object data){
 
-        return  new Result(true,message,data);
+        return  new Result(0,message,data);
     }
     public  static  Result success(String message){
 
-        return  new Result(true,message);
+        return  new Result(0,message);
     }
 
     public static Result fail(String message){
 
-        return new Result(false,message);
+        return new Result(1,message);
     }
 
 

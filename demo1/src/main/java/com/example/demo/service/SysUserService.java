@@ -12,5 +12,8 @@ public interface SysUserService {
 
     SysUser findByuserName(String username);
 
+    SysUser findByOpenid(String username);
+
+
 
 }

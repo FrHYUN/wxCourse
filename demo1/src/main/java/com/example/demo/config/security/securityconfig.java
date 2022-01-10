@@ -39,7 +39,7 @@ public class securityconfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) throws Exception {
       web.ignoring()
-              .mvcMatchers("/login");
+              .mvcMatchers("/login","/user/info","/card/balance","/card/info");
 
     }
 

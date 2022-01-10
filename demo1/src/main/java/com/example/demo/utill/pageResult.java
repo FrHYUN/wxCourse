@@ -11,8 +11,8 @@ public class pageResult  extends Result implements Serializable{
     private List rows;
 
     public pageResult(long total, List list) {
-        this.setFlag(true);
-        this.setMessage("分页查询成功");
+        this.setCode(0);
+        this.setMsg("分页查询成功");
         this.total = total;
         this.rows = list;
     }
